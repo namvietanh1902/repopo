@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    border:0;
+    font-family:'Inter',sans-serif;
+}
+.header_container{
+    width: 80%;
+    margin: 0 auto;
+    padding:20px;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+}
+.logo{
+    font-size: 16px;
+}
+.logo span{
+    background-color: black;
+    color: white;
+    padding: 20px;
+
+}
+.media{
+    display: flex;
+}
+.media-icon{
+    margin: 10px;
+    font-size: 15px;
+    width: 30px;
+    height: 30px;
+    background-color:#F26464;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+.info span{
+    font-size: 16px;
+    display: block;
+}
+.body-container{
+    width: 80%;
+    margin: 0 auto;
+    padding:20px;
+}
+.profile{
+    display: flex;
+    
+    justify-content: space-between;
+}
+.self-image{
+    width: 60%;
+    padding-right: 100px;
+    
+}
+.self-image img {
+    max-width: 100%;
+    height:auto;
+}
+.statistic{
+    display: flex;
+    margin: 12px;
+    justify-content:space-between;
+    margin: 20px;
+    padding: 0 100px 0 70px;
+}
+.stats_detail strong{
+    font-size: 36px;
+    color:#F26464;
+    font-weight: 600;
+    
+}
+h1{
+    font-size:48px;
+}
+.introduction{
+    padding:60px 0 120px;
+}
+.title{
+    font-weight: 700;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 16px;
+    border-bottom: 3px solid #F26464;
+    padding-bottom: 8px;
+    margin-bottom: 40px;
+}
+.intro-section{
+    padding-top: 60px;
+    padding-bottom: 120px;
+}
+.introduction p{
+    font-size: 24px;
+    line-height: 40px;
+    font-weight: 300;
+    margin-bottom: 60px;
+    margin-top: 30px;
+}
+.btn-sec{
+    text-align: center;
+}
+.download-btn{
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 13px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: #F26464;
+    padding: 17px 30px;
+    border: 2px solid #F26464;
+    border-radius: 60px;
+}
+.skill-section{
+    display: flex;
+}
+.half-section{
+    width: 50%;
+}
+.skill-list{
+    padding-top:20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.skill-item{
+    display: inline-block;
+    color: #373737;
+    font-size: 16px;
+    padding: 10px 20px;
+    background-color: #FFF;
+    border: 1px solid #D7D7D7;
+    border-radius: 27px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
