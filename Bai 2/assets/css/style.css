@@ -3,11 +3,7 @@
     border:0;
     font-family:'Inter',sans-serif;
 }
-.header_container{
-    width: 80%;
-    margin: 0 auto;
-    padding:20px;
-}
+
 .nav{
     display: flex;
     justify-content: space-between;
@@ -39,8 +35,10 @@
 .info span{
     font-size: 16px;
     display: block;
+    font-weight:500;
+    padding-bottom: 30px;
 }
-.body-container{
+.container{
     width: 80%;
     margin: 0 auto;
     padding:20px;
@@ -62,14 +60,17 @@
 .statistic{
     display: flex;
     margin: 12px;
-    justify-content:space-between;
-    margin: 20px;
-    padding: 0 100px 0 70px;
+    
+    
+}
+.stats_detail{
+    width: 33.3%;
 }
 .stats_detail strong{
     font-size: 36px;
     color:#F26464;
     font-weight: 600;
+
     
 }
 h1{
@@ -79,14 +80,15 @@ h1{
     padding:60px 0 120px;
 }
 .title{
+    display: inline-block;
     font-weight: 700;
     color: #000;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-size: 16px;
     border-bottom: 3px solid #F26464;
-    padding-bottom: 8px;
-    margin-bottom: 40px;
+    padding-bottom: 7px;
+    margin-bottom: 23px;
 }
 .intro-section{
     padding-top: 60px;
@@ -102,7 +104,7 @@ h1{
 .btn-sec{
     text-align: center;
 }
-.download-btn{
+.btn{
     display: inline-block;
     text-transform: uppercase;
     font-size: 12px;
@@ -114,8 +116,13 @@ h1{
     border: 2px solid #F26464;
     border-radius: 60px;
 }
+.btn:hover{
+    color: #FFF;
+    background-color: #F26464;
+}
 .skill-section{
     display: flex;
+    padding-bottom: 105px ;
 }
 .half-section{
     width: 50%;
@@ -136,4 +143,106 @@ h1{
     margin-right: 15px;
     margin-bottom: 15px;
     font-weight: 500;
+}
+.exp-section{
+    display: flex;
+}
+.exp-half-section{
+    padding-right: 70px;
+}
+.year{
+    color: #373737;
+    font-size: 14px;
+    font-weight: 700;
+    padding-bottom: 10px;
+}
+.office{
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+.position{
+    color: #373737;
+    font-weight: 500;
+    font-size: 18px;
+    padding-bottom: 30px;
+}
+.exp-half-section p{
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 300;
+}
+.exp-half-section ul li{
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 300;
+    padding-left: 28px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.work-item{
+    padding-left: 70px;
+    padding-top: 40px;
+    padding-right: 70px;
+    background-color: #F6F8FA;
+    margin-bottom: 40px;
+    display: flex;
+}
+.work-title{
+    color: #000;
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+.work-item p{
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 30px;
+}
+.work-desc{
+    padding-right: 30px;
+    padding-bottom: 60px;
+}
+.work-img {
+    flex: 0 0 auto;
+    width: 41.66666667%;
+}
+.work-img img{
+    max-width: 100%;
+    height: auto;
+}
+.footer{
+    background-color: #000;
+    padding: 120px 0;
+    text-align:center;
+}
+.footer-section{
+    padding-bottom: 100px;
+}
+.footer-section span{
+    color: rgba(255,255,255,0.5);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: block;
+    padding-bottom: 20px;
+}
+.footer-section h4{
+    color: #FFF;
+    font-size: 48px;
+    font-weight: 700;
+}
+.footer-section p{
+    letter-spacing: 1.13px;
+    color: #FFF;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+.copyright{
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 1px;
+    font-size: 16px;
 }
