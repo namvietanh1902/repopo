@@ -276,6 +276,8 @@ body {
 }
 .profile-content{
     display: flex;
+    width: 908px;
+    padding: 0 16px;
     justify-content:space-between;
 }
 .profile-detail {
