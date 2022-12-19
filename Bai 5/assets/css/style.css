@@ -62,6 +62,15 @@
 .ruby-img{
     transition: all 0.5s ease-in-out;
 }
+.ruby{
+    color: white;
+}
+.ruby h2{
+    font-weight: 400;
+}
+.ruby span{
+    font-weight: 600px;
+}
 .ruby-content:hover img{
     
     transform:scale(1.1);
