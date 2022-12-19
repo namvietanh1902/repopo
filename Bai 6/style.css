@@ -1,0 +1,29 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.navbar{
+  display: flex;
+  justify-content:space-between;
+  padding: 4px 24px 16px
+}
+.nav_left{
+  display: flex;
+}
+.nav_right{
+  display: flex;
+}
+.nav_item{
+  position: relative;
+  padding: 8px;
+  margin-right: 8px;
+}
+.nav_button{
+  padding: 8px;
+  margin-right: 8px;
+  background-color: black;
+  color: white;
+  border-radius: 10%;
+}
