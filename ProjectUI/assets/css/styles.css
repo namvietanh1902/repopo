@@ -3,17 +3,44 @@
   padding: 0;
   font-family: "Axiforma", sans-serif;
 }
-
+body{
+  max-width: 100%;
+  overflow-x: hidden;
+}
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 28px 120px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-  position: relative;
-  z-index: 100;
+  padding: 28px  120px;
+  width: 1300px;
 }
-
+.sticky{
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  position: fixed;
+  top: 0;
+  width: 1300px;
+  z-index:1000;
+  background-color: white;
+  
+}
+.sticky + main {
+  padding-top: 102px;
+}
+.bg-container::before{
+  content: "";
+  display: block;
+  position: absolute;
+  overflow-x: hidden;
+  z-index: -1;
+  top:0;
+  left:calc(50vw + 44px);
+  width:1143px;
+  height:1149px;
+  background: url('../img/home-header-bg@1.5x.jpg') no-repeat top right/cover;
+  mix-blend-mode: multiply;
+  transform:translate(0,-28.5%);
+  transition:unset;
+}
 .header-left {
   display: flex;
   align-items: center;
@@ -57,8 +84,10 @@ header {
 }
 
 .header-right {
+
   display: flex;
   align-items: center;
+
 }
 
 .header-right h2 {
@@ -98,9 +127,7 @@ header {
   background: rgba(255, 255, 255, 0.5);
 }
 
-.login:hover,
-.sign-up:hover,
-.started:hover {
+.btn:hover {
   transform: translateY(1px);
 }
 
@@ -110,7 +137,6 @@ header {
   right: 0;
   left: 0;
   height: 0;
-  z-index: 10;
   opacity: 0;
   transition: all 0.5s linear;
   background-color: #ccc;
@@ -120,25 +146,31 @@ header {
   justify-content: space-between;
   max-inline-size: 1160px;
   inline-size: 100%;
-  margin: 0px auto 100px;
+  margin: 0px auto 50px;
   padding: 0px 10px;
   position: relative;
   flex-direction: row;
 }
+
 .intro-left{
   margin-left: 30px;
   padding-top: 60px;
   width:440px;
 }
 .intro-right{
+  padding-top:45px;
+  padding-bottom: 30px;
   width:670px;
+
 }
 .video-wrapper video{
   width: 100%;
   height: 100%;
+  
 }
 .video-wrapper{
   margin-left:32px ;
+
 }
 .intro-title{
   font-weight: 800;
@@ -208,4 +240,124 @@ header {
 .logo-container img{
   width: 100%;
   height: 100%;
+}
+.companies-section{
+  position: relative;
+  text-align: center;
+  padding-top: 100px;
+}
+.companies-section .section-header{
+  text-transform: uppercase;
+  font-size: 13px;
+  color: #7c828d;
+  margin: 10px;
+}
+.list-company{
+  display: flex;
+  max-width: 750px;
+  justify-content: center;
+  padding-top: 20px;
+  margin: 0 auto;
+}
+.companies-item{
+  width: 120px;
+  padding-left: 20px;
+  height: 20px;
+}
+.companies-item img{
+  width: 100%;
+  height: 100%;
+}
+.tab-section{
+  padding: 60px 80px;
+  width:1230px;
+  min-height: 480px;
+  background-color: #ccc;
+  margin: 0 auto;
+  margin-top: 40px;
+  border-radius: 25px;
+}
+.pink-section{
+  background-color: #fff8fb;
+}
+.tablinks{
+  display: flex;
+  justify-content:space-between;
+  margin-bottom: 30px;
+  max-width: 400px;
+}
+.tablinks a{
+  text-decoration: none;
+  color: black;
+  font-size: 15px;
+  font-weight: bold;
+}
+.left-content{
+  max-width: 410px;
+}
+.left-content h1{
+  margin-top:20px;
+  font-weight: bold;
+  font-size: 50px;
+}
+.left-content .item{
+  margin-bottom: 30px;
+}
+.left-content .flex-item{
+  display: flex;
+}
+.flex-item .sub-item{
+  margin-right: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+.flex-item  p{
+  text-transform: uppercase;
+  font-size:13px ;
+  margin-right: 10px;
+  font-weight:  700;
+}
+.flex-item .sub-item:not(:last-child)::after{
+  content: "";
+  border: 0.5px solid #000;
+  margin-left: 10px;
+}
+.pink-section .btn{
+  width: 170px;
+  height: 50px;
+  color: #fff;
+  background-color: #fd71af;
+  display: flex;
+  justify-content:center;
+  align-items:center;
+}
+.right-content{
+  position: relative;
+  margin-left: 85px;
+  top:-145px;
+  margin-bottom: -145px;
+
+}
+.right-content video{
+  width: 100%;
+  border-radius: 16px;
+  position: relative;
+  
+}
+.tabcontent{
+  display: none;
+}
+.pink-section> .tabcontent{
+  
+  display: flex;
+  position: relative;
+}
+
+.pink-section .tab:hover {
+  border-bottom: 3px solid #eb3dae;
+}
+
+/* Create an active/current tablink class */
+.pink-section .tab.active {
+  border-bottom: 3px solid #eb3dae;
 }
