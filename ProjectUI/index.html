@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>ClickUp</title>
     <script
       src="https://kit.fontawesome.com/a8df01a584.js"
       crossorigin="anonymous"
@@ -14,7 +16,7 @@
     <div class="bg-container">
 
     </div>
-    <header class="non-sticky">
+    <header >
       <div class="header-left">
         <svg
           width="146"
@@ -176,12 +178,12 @@
       </div>
       <div class="tab-section pink-section">
         <div class="tablinks">
-          <a href="javascript:void(0)" class="tab defaultClick" onclick="openTab(event,'Project')" >Project & Tasks</a>
-          <a  href="javascript:void(0)" class="tab"  onclick="openTab(event,'Chat')">Chat</a>
-          <a  href="javascript:void(0)" class="tab"   onclick="openTab(event,'Goals')">Goals</a>
-          <a  href="javascript:void(0)" class="tab" onclick="openTab(event,'View')">View</a>
+          <a href="javascript:void(0)" class="pink tab defaultClick" onclick="openTab(event,'pink','Project')" >Project & Tasks</a>
+          <a  href="javascript:void(0)" class="pink tab"  onclick="openTab(event,'pink','Chat')">Chat</a>
+          <a  href="javascript:void(0)" class="pink tab"   onclick="openTab(event,'pink','Goals')">Goals</a>
+          <a  href="javascript:void(0)" class="pink tab" onclick="openTab(event,'pink','View')">View</a>
         </div>
-        <div id ="Project" class="tabcontent">
+        <div id ="Project" class="pink tabcontent">
           <div class="left-content">
             <h1 class="item">Simplify work and get more done</h1>
             <p class="item">Plan, track, and manage any type of work with project management that flexes to your team's needs.</p>
@@ -199,7 +201,7 @@
             </video>
           </div>
         </div>
-        <div id ="Chat" class="tabcontent">
+        <div id ="Chat" class="pink tabcontent">
           <div class="left-content">
             <h1 class="item">Bring everyone together in Chat.</h1>
             <p class="item">Work smarter as a team with real-time chat. Tag individuals or groups, assign comments for action items, and link tasks to get more done together.</p>
@@ -218,7 +220,7 @@
             </video>
           </div>
         </div>
-        <div id ="Goals" class="tabcontent">
+        <div id ="Goals" class="pink tabcontent">
           <div class="left-content">
             <h1 class="item">Set goals and crush them faster.</h1>
             <p class="item">Stay on track to hit your goals with targets for task completions, numbers, monetary values and more. Track progress in real-time connecting tasks to goals and keep your objectives organized with Goal Folders.</p>
@@ -236,7 +238,7 @@
             </video>
           </div>
         </div>
-        <div id ="View" class="tabcontent">
+        <div id ="View" class="pink tabcontent">
           <div class="left-content">
             <h1 class="item">Simplify work and get more done</h1>
             <p class="item">Plan, track, and manage any type of work with project management that flexes to your team's needs.</p>
@@ -250,12 +252,58 @@
           </div>
           <div class="right-content">
             <video autoplay="" class="lazy loaded" loop="" height="650" muted="" playsinline="" width="980" __idm_id__="548866">
-              <source data-src="/videos/main/views.mp4" type="video/mp4" src="./assets/video/projects.mp4">
+              <source data-src="./assets/video/projects.mp4" type="video/mp4" src="./assets/video/projects.mp4">
             </video>
           </div>
         </div>
       </div>
-      <div class="tab-section"></div>
+      <div class="tab-section features-section">
+        <div class="tablinks">
+          <a href="javascript:void(0)" class="features tab defaultClick" onclick="openTab(event,'features','Docs')" >Docs</a>
+          <a  href="javascript:void(0)" class="features tab"  onclick="openTab(event,'features','Whiteboard')">Whiteboard</a>
+          <a  href="javascript:void(0)" class="features tab"   onclick="openTab(event,'features','Dashboard')">DashBoard</a>
+        </div>
+        <div id="Docs" class="features tabcontent">
+          <h1 class="content-header">
+            The world's most powerful
+            (and fun) Docs.
+          </h1>
+          <div class="content-video">
+            <video autoplay="" loop="" class="lazy loaded" height="587" muted="" playsinline="" poster="/images/poster-images/videos/main/docs.png" width="860" __idm_id__="1368071">
+              <source data-src="./assets/video/projects.mp4" type="video/mp4" src="./assets/video/projects.mp4">
+            </video>
+          </div>
+        </div>
+        <div id="Whiteboard" class="features tabcontent">
+          <h1 class="content-header">
+            Bring your ideas to
+            life with Whiteboards.
+          </h1>
+          <div class="content-video">
+            <video autoplay="" loop="" class="lazy loaded" height="587" muted="" playsinline="" poster="/images/poster-images/videos/main/docs.png" width="860" __idm_id__="1368071">
+              <source data-src="./assets/video/projects.mp4" type="video/mp4" src="./assets/video/projects.mp4">
+            </video>
+          </div>
+        </div>
+        <div id="Dashboard" class="features tabcontent">
+          <h1 class="content-header">
+            See how you're doing in
+          real-time with Dashboards.
+          </h1>
+          <div class="content-video">
+            <video autoplay="" loop="" class="lazy loaded" height="587" muted="" playsinline="" poster="/images/poster-images/videos/main/docs.png" width="860" __idm_id__="1368071">
+              <source data-src="./assets/video/projects.mp4" type="video/mp4" src="./assets/video/projects.mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+      <div class="features-btn-section">
+        
+          <div class="features-btn">
+            Get started
+          <i class="fa-solid fa-arrow-right"></i>
+        </div>
+      </div>
 
     </main>
 

@@ -169,6 +169,8 @@ header {
   
 }
 .video-wrapper{
+  border-radius: 20px;
+  overflow: hidden;
   margin-left:32px ;
 
 }
@@ -291,6 +293,7 @@ header {
   color: black;
   font-size: 15px;
   font-weight: bold;
+  padding-bottom: 3px;
 }
 .left-content{
   max-width: 410px;
@@ -331,6 +334,7 @@ header {
   justify-content:center;
   align-items:center;
 }
+
 .right-content{
   position: relative;
   margin-left: 85px;
@@ -340,7 +344,7 @@ header {
 }
 .right-content video{
   width: 100%;
-  border-radius: 16px;
+  border-radius: 20px;
   position: relative;
   
 }
@@ -352,12 +356,97 @@ header {
   display: flex;
   position: relative;
 }
-
+.tab:hover{
+  animation: UnderlinedFocus .3s ease-in-out ;
+}
 .pink-section .tab:hover {
   border-bottom: 3px solid #eb3dae;
+  
 }
 
-/* Create an active/current tablink class */
+@keyframes UnderlinedFocus {
+  0%{
+    border-width: 3px;
+  } 
+  50%{
+    padding-bottom: 2px;
+    border-width: 4px;
+  } 
+  100%{
+    border-width: 3px;
+  }
+}
 .pink-section .tab.active {
   border-bottom: 3px solid #eb3dae;
+}
+.features-section{
+  background-color: #f8f7fe;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  background-image: url('../img/features-top-bg-icons.png');
+  background-position: 0 50px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  
+}
+.features-section .tabcontent{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.features-section .tablinks{
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.features-section .tablinks a{
+  margin: 0 20px;
+}
+.features-section .content-header{
+  margin: 50px auto;
+  font-size: 39px;
+  max-width: 560px;
+  text-align: center;
+}
+.features-section .content-video{
+  margin: 0 170px;
+}
+.features-section .tab.active{
+  border-bottom: 3px solid #7b68ee;
+}
+.features-section .tab:hover{
+  border-bottom: 3px solid #7b68ee;
+}
+.features-btn-section{
+  background-color: #e6e2fe;
+  max-width:1230px;
+  border-bottom-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+  margin: 0 auto;
+  padding: 20px 80px;
+  text-align: center;
+  width:1230px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+
+}
+
+.features-btn{
+  
+  text-align: center;
+  font-size:17px;
+  font-weight: 600;
+  
+  padding: 10px;
+}
+.features-btn i{
+  margin-left: 5px;
+  color:#7b68ee;
+}
+.features-btn-section:hover .features-btn{
+  background-color: white;
+  border-radius: 10px;
 }
