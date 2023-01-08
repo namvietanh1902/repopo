@@ -1,0 +1,72 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+}
+
+.title{
+    width: 100%;
+    padding-bottom: 20px;
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+form{
+    width: 400px;
+    
+    margin: 40px 0;
+    
+    
+    border: 3px solid black;
+    
+}
+.input{
+    padding: 10px;
+    font-size: 21px;
+}
+.input input{
+    display: block;
+    margin-top: 5px;
+    width: 95%;
+    padding: 5px;
+    border-width: 1px;
+    border-radius: 5%;
+}
+.input-btn{
+    width: 100%;    
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px 0;
+    
+}
+#submit-btn{
+    padding: 5px 20px;
+    margin-right: 10px;
+    background-color: black;
+    color:white;
+    
+}
+.table{
+    padding: 10px 20px;
+    border: 3px solid black;
+    width: 80%;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(odd) {
+    background-color: #dddddd;
+  }
