@@ -5,51 +5,37 @@ const inputSalary = document.getElementById("input-salary");
 const inputCity = document.getElementById("input-city");
 
 const btn = document.getElementById("submit-btn");
-const arr = [
-    {
-        name: "Van Thinh",
-        email: "namhai@gmail.com",
-        city: "DaNang",
-        salary: 200,
-    },
-    {
-        name: "Van Hai",
-        email: "mamtom@gmail.com",
-        city: "Quang Nam",
-        salary: 300,
-    }, {
-        name: "Quang Khang",
-        email: "balankhang1967@gmail.com",
-        city: "DaNang",
-        salary: 0,
-    },
-];;
 
+arr = []
 
 btn.addEventListener("click", (e) => {
     e.preventDefault();
+    const userList = JSON.parse(localStorage.getItem("userList"));
     const person = {
         name: inputName.value,
         email: inputEmail.value,
         city: inputCity.value,
         salary: inputSalary.value,
     }
-    arr.push(person);
+    userList.push(person);
     console.log(arr);
     inputName.value = "";
     inputEmail.value = "";
     inputCity.value = "";
     inputSalary.value = "";
-    renderTable(arr);
+    localStorage.setItem("userList", JSON.stringify(userList));
+    renderTable();
 
 
 })
-const renderTable = (arr) => {
+const renderTable = () => {
+
+    const userList = JSON.parse(localStorage.getItem("userList"));
+    console.log(userList);
     const dataTable = document.getElementById("output-table");
-    const htmlValue = arr.reduce((acc, val, index) => {
+    const htmlValue = userList.reduce((acc, val, index) => {
         console.log(val)
         return acc + `
-        
         <tr>
             <td>${val.name}</td>
             <td>${val.email}</td>
@@ -72,9 +58,10 @@ const renderTable = (arr) => {
     dataTable.innerHTML = htmlValue;
 }
 const deleteElement = (index) => {
-    arr.splice(index, 1);
-    console.log(arr);
-    renderTable(arr);
+    const userList = JSON.parse(localStorage.getItem("userList"));
+    userList.splice(index, 1);
+    localStorage.setItem("userList", JSON.stringify(userList));
+    renderTable();
 }
 
-renderTable(arr);
+renderTable();
