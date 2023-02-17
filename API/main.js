@@ -25,8 +25,42 @@ btn.addEventListener("click", (e) => {
             return response.json()
         })
         .then((data) => {
-            return data;
+            renderTable(data)
         })
-    console.log(data)
 
 })
+const table = fetch(url + "hehe")
+    .then((response) => {
+        return response.json()
+    })
+    .then((data) => {
+        renderTable(data);
+
+    })
+
+const renderTable = (data) => {
+
+
+
+    const dataTable = document.getElementById("output-table");
+    const htmlValue = data.reduce((acc, val, index) => {
+        return acc + `
+            <tr>
+                <td>${val.Ho}</td>
+                <td>${val.Ten}</td>
+                <td>${val.SoLan}</td>
+                <td>${val.createdAt}</td>
+                
+            </tr>
+            `;
+
+    }, `
+        <tr>
+            <th>Ho</th>
+            <th>Ten</th>
+            <th>So Lan</th>
+            <th>Tao vao</th>
+        </tr>
+    `);
+    dataTable.innerHTML = htmlValue;
+}
