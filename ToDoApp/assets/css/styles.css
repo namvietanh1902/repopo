@@ -3,8 +3,11 @@
     padding: 0;
     margin: 0;
     font-family: "Plus Jakarta Sans", sans-serif;
+    
 }
-
+body{
+    overflow: hidden;
+}
 .content{
     width: 90%;
     margin: 0 auto;
@@ -57,9 +60,11 @@
     margin-top: 30px;
     display: flex;
     justify-content: space-between;
+    height: 800px;
 }
 .column{
     width: 400px;
+    overflow-y: auto;
 }
 .column-header{
     height: 34px;
@@ -121,8 +126,33 @@
 .finished .column-count{
     background-color: #69CE7E;
 }
+.column-content::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+.column-content::-webkit-scrollbar
+{
+	width: 8px;
+	background-color: #F5F5F5;
+}
+
+.column-content::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #5A5C63;
+}
+.column-content{
+    overflow-y: auto;
+    height: 500px;
+    overflow-x: hidden;
+}
 .card{
-    width: 400px;
+    margin-top: 8px;
+    width: 396px;
     height: 216px;
     background: #FFFFFF;
     border-radius: 8px;
@@ -197,4 +227,64 @@
 .card-date img{
     width: 12px;
     height: 12px;
+}
+.hidden{
+    display: none !important;
+}
+.modal{
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4);
+}
+.addForm{
+    height: 300px;
+    width: 600px;
+    background-color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 4px;
+}
+.close-btn{
+    
+    display: flex;
+    width: 90%;
+    justify-content: flex-end;
+}
+.close{
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.form-title{
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+.input{
+    width: 90%;
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+.input input{
+    width: 400px;
+}
+.submit-btn{
+    margin-top: 10px;
+    width: 90%;
+}
+.submit-btn button{
+    width: 100%;
+    padding: 6px 0;
 }

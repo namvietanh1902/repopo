@@ -10,6 +10,35 @@
 </head>
 
 <body>
+    <div class="modal hidden" id="addModal">
+        <form action="" class="addForm">
+            <div class="close-btn">
+                <span class="close">&times;</span>
+            </div>
+            <div class="form-title">
+                Add Todo
+
+            </div>
+            <div class="input">
+                <label for="category">Category: </label>
+                <input type="text" name="category" id="input-category">
+            </div>
+            <div class="input">
+                <label for="title">Title: </label>
+                <input type="text" name="title" id="input-title">
+            </div>
+            <div class="input">
+                <label for="input-content">Content: </label>
+                <textarea name="content" id="input-content" cols="59" rows="6"></textarea>
+            </div>
+            <div class="submit-btn">
+                <button class="submit">Submit</button>
+            </div>
+
+
+
+        </form>
+    </div>
     <div class="content">
 
         <div class="header">
@@ -26,7 +55,7 @@
                 </div>
             </div>
             <div class="header-right">
-                <div class="new-task">
+                <div class="new-task" onclick="showAddModal()">
                     + New task
                 </div>
 
@@ -56,40 +85,8 @@
                     </div>
                 </div>
                 <div class="column-content">
-                    <div class="card">
-                        <div class="card-header">
-                            <div class="card-intro">
-                                <div class="card-category">
-                                    Marketing
-                                </div>
-                                <div class="card-title">
-                                    Write SEO for someone
-                                </div>
-                            </div>
-                            <div class="card-btn">
-                                <div class="btn">
-                                    <img src="./assets/img/edit.png" alt="" srcset="">
-                                </div>
-                                <div class="btn">
-                                    <img src="./assets/img/delete.png" alt="" srcset="">
-                                </div>
-                            </div>
 
 
-                        </div>
-                        <div class="card-content">
-                            <div class="card-desc">
-                                This is an existential moment for effective altruism and the rationalist community
-                                writ-large.
-                            </div>
-                            <div class="card-date">
-                                <img src="./assets/img/Vectorclock.png" alt="" srcset="">
-                                June 30, 2022
-                            </div>
-                        </div>
-
-
-                    </div>
                 </div>
             </div>
             <div class="column finished">
@@ -107,7 +104,11 @@
             </div>
         </div>
     </div>
+
+    <div class="modal hidden" id="editModal">
+
+    </div>
 </body>
-<script src="./main.js"></script>
+<script src="./assets/js/main.js"></script>
 
 </html>
