@@ -67,6 +67,30 @@ const showEditModal = (index) => {
         editModal.classList.toggle('hidden')
     })
 }
+const showCount = (todoList) => {
+    const todoCountCol = $('.todo .column-count')
+    const doingCountCol = $('.doing .column-count')
+    const finishedCountCol = $('.finished .column-count')
+    let todoCount = 0, doingCount = 0, finishedCount = 0
+    todoList.filter((element) => {
+        switch (element.type) {
+            case 'todo':
+                todoCount += 1;
+                break;
+            case 'doing':
+                doingCount += 1;
+                break;
+            case 'finished':
+                finishedCount += 1;
+                break;
+        }
+
+    })
+    todoCountCol.innerHTML = todoCount
+    doingCountCol.innerHTML = doingCount
+    finishedCountCol.innerHTML = finishedCount
+
+}
 const closeEdit = $('#editModal .close')
 const closeAdd = $('#addModal .close')
 closeAdd.onclick = function () {
@@ -94,7 +118,7 @@ const cols = {
 
 const renderData = (todoList) => {
     localStorage.setItem('todoList', JSON.stringify(todoList))
-
+    showCount(todoList)
     let htmls = todoList.reduce((acc, element, index) => {
         let type = element.type
         let html = ` 
