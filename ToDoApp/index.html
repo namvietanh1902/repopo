@@ -20,16 +20,57 @@
 
             </div>
             <div class="input">
-                <label for="category">Category: </label>
                 <input type="text" name="category" id="input-category">
             </div>
             <div class="input">
-                <label for="title">Title: </label>
                 <input type="text" name="title" id="input-title">
             </div>
             <div class="input">
-                <label for="input-content">Content: </label>
                 <textarea name="content" id="input-content" cols="59" rows="6"></textarea>
+            </div>
+            <div class="submit-btn">
+                <button class="submit">Submit</button>
+            </div>
+
+
+
+        </form>
+    </div>
+    <div class="modal hidden " id="editModal">
+
+        <form action="" class="editForm">
+            <div class="close-btn">
+                <span class="close">&times;</span>
+            </div>
+            <div class="form-title">
+                Edit Todo
+
+            </div>
+            <div class="input">
+                <input type="text" name="category" id="edit-category">
+            </div>
+            <div class="input">
+                <input type="text" name="title" id="edit-title">
+            </div>
+            <div class="input">
+                <textarea name="content" id="edit-content" cols="59" rows="6"></textarea>
+            </div>
+            <div class="radio">
+                <div class="radio-btn">
+                    <input type="radio" id="todo" name="type" value="todo">
+                    <label for="todo">Todo</label><br>
+                </div>
+                <div class="radio-btn">
+                    <input type="radio" id="doing" name="type" value="doing">
+                    <label for="doing">Doing</label><br>
+                </div>
+                <div class="radio-btn">
+                    <input type="radio" id="finished" name="type" value="finished">
+                    <label for="finished">Finished</label>
+                </div>
+
+
+
             </div>
             <div class="submit-btn">
                 <button class="submit">Submit</button>
@@ -105,9 +146,7 @@
         </div>
     </div>
 
-    <div class="modal hidden" id="editModal">
 
-    </div>
 </body>
 <script src="./assets/js/main.js"></script>
 
