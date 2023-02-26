@@ -8,23 +8,27 @@ const showAddModal = () => {
     console.log(submitBtn)
     submitBtn.addEventListener('click', (e) => {
         e.preventDefault()
+        showError('#addModal')
 
-        let todoList = JSON.parse(localStorage.getItem('todoList'))
-        console.log(todoList)
-        const inputCat = $('#addModal #input-category')
-        const inputTitle = $('#addModal #input-title')
-        const inputContent = $('#addModal #input-content')
-        const data = {
-            category: inputCat.value,
-            title: inputTitle.value,
-            content: inputContent.value,
-            dateTime: new Date().toDateString().slice(4),
-            type: 'todo'
+        if (validData('#addModal')) {
 
+            let todoList = JSON.parse(localStorage.getItem('todoList'))
+            console.log(todoList)
+            const inputCat = $('#addModal #input-category')
+            const inputTitle = $('#addModal #input-title')
+            const inputContent = $('#addModal #input-content')
+            const data = {
+                category: inputCat.value,
+                title: inputTitle.value,
+                content: inputContent.value,
+                dateTime: new Date().toDateString().slice(4),
+                type: 'todo'
+
+            }
+            todoList.push(data)
+            renderData(todoList)
+            addModal.classList.toggle('hidden')
         }
-        todoList.push(data)
-        renderData(todoList)
-        addModal.classList.toggle('hidden')
     })
 }
 const showEditModal = (index) => {
@@ -56,15 +60,19 @@ const showEditModal = (index) => {
     setType(curr.type)
     submitBtn.addEventListener('click', (e) => {
         e.preventDefault()
-        curr.category = editCat.value;
-        curr.title = editTitle.value;
-        curr.content = editContent.value;
-        curr.type = getType()
-        curr.dateTime = new Date().toDateString().slice(4);
+        showError('#editModal');
+        if (validData("#editModal")) {
+
+            curr.category = editCat.value;
+            curr.title = editTitle.value;
+            curr.content = editContent.value;
+            curr.type = getType()
+            curr.dateTime = new Date().toDateString().slice(4);
 
 
-        renderData(todoList)
-        editModal.classList.toggle('hidden')
+            renderData(todoList)
+            editModal.classList.toggle('hidden')
+        }
     })
 }
 const showCount = (todoList) => {
@@ -90,6 +98,35 @@ const showCount = (todoList) => {
     doingCountCol.innerHTML = doingCount
     finishedCountCol.innerHTML = finishedCount
 
+}
+const showError = (modal) => {
+    const formInputs = $$(`${modal} .input`)
+    for (let i = 0; i < formInputs.length; i++) {
+
+        let input = formInputs[i].childNodes[1];
+        if (input.value.trim() === "") {
+
+            formInputs[i].classList.add("invalid")
+
+        }
+        else {
+            formInputs[i].classList.remove("invalid")
+        }
+    }
+}
+const validData = (modal) => {
+    let err = true;
+    const formInputs = $$(`${modal} .input`)
+    for (let i = 0; i < formInputs.length; i++) {
+
+        let input = formInputs[i].childNodes[1];
+        if (input.value.trim() === "") {
+
+            err = false;
+            break;
+        }
+    }
+    return err;
 }
 const closeEdit = $('#editModal .close')
 const closeAdd = $('#addModal .close')
